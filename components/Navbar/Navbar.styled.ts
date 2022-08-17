@@ -4,7 +4,7 @@ export const Container = styled.div`
   z-index: 999;
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: -60px;
   transform: translate(-50%, 0);
   display: flex;
   align-items: center;

@@ -12,6 +12,7 @@ export const HeroWrapper = styled.section`
   background-image: url(${hero.src});
   background-repeat: no-repeat;
   background-position: right;
+  background-size: 50% 90%;
 `;
 
 export const Container = styled.div`

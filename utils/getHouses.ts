@@ -30,13 +30,14 @@ export type House = {
 export const getHouses = (result: ResultObject) => {
   const minPrice = Number(result.price.slice(0, 6));
   const maxPrice = Number(result.price.slice(9));
+  console.log(result);
 
   const filteredHouses: House[] = houses.filter(
     (house: House) =>
-      (house.country === result.location || result.location === "") &&
-      (house.type === result.type || result.type === "") &&
+      (house.country === result.location || result.location.includes("any")) &&
+      (house.type === result.type || result.type.includes("any")) &&
       ((Number(house.price) <= maxPrice && Number(house.price) >= minPrice) ||
-        result.price === "")
+        result.price.includes("any"))
   );
   console.log(filteredHouses);
   return filteredHouses;

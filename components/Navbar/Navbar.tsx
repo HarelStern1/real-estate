@@ -9,9 +9,9 @@ import HouseList from "../HouseList/HouseList";
 import { House } from "../../utils/getHouses";
 
 const Navbar: FC = () => {
-  const [location, setLocation] = useState("");
-  const [type, setType] = useState("");
-  const [price, setPrice] = useState("");
+  const [location, setLocation] = useState("Location (any)");
+  const [type, setType] = useState("Property (any)");
+  const [price, setPrice] = useState("Price range (any)");
   const [result, setResult] = useState({ location, type, price });
   const [houses, setHouses] = useState<House[]>([]);
 
